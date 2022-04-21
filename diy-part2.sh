@@ -11,4 +11,9 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+sed -i "s/hostname='OpenWrt'/hostname='Nighthawk-X6'/g" package/base-files/files/bin/config_generate
+
+# Change Default Theme
+sed -i 's/Bootstrap/Argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/-bootstrap/-argon/g' feeds/luci/collections/luci/Makefile
